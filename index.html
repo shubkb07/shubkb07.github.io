@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shubham Kumar Bansal | Portfolio</title>
+
+  <!-- Tailwind CSS with dark mode -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors">
+
+    <!-- Dark mode & Mobile nav toggle -->
+    <div class="fixed top-4 right-4 flex items-center space-x-2 z-50">
+      <button id="nav-toggle" class="md:hidden p-2 bg-gray-200 dark:bg-gray-800 rounded">☰</button>
+      <button id="dark-toggle" class="p-2 bg-gray-200 dark:bg-gray-800 rounded" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  
+    <!-- Header -->
+    <header id="hero"
+      class="pt-20 pb-10 text-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white dark:from-gray-800 dark:to-gray-700">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2">Shubham Kumar Bansal</h1>
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl">Software Developer &amp; Web Enthusiast</p>
+      <a href="Shubham-Kumar-Bansal-Resume.pdf" class="inline-block mt-4 px-4 py-2 bg-white text-indigo-600 hover:bg-gray-100 rounded-full font-medium transition-colors shadow-md">
+        <span class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Download Resume
+        </span>
+      </a>
+    </header>
+  
+    <!-- Desktop Navigation -->
+    <nav id="main-nav"
+      class="hidden md:flex justify-center space-x-4 lg:space-x-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 py-2 sticky top-0 z-40">
+      <a href="#summary" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Summary</a>
+      <a href="#courses" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Courses</a>
+      <a href="#education" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Education</a>
+      <a href="#skills" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Skills</a>
+      <a href="#experience" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Experience</a>
+      <a href="#projects" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Projects</a>
+      <a href="#achievements" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Achievements</a>
+      <a href="#contributions" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Contribs</a>
+      <a href="#downloads" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Downloads</a>
+      <a href="#contact" class="px-3 py-1 text-sm sm:text-base hover:text-indigo-500 dark:hover:text-indigo-400">Contact</a>
+    </nav>
+  
+    <!-- Mobile nav panel -->
+    <div id="mobile-nav" class="md:hidden hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+      <nav class="flex flex-col space-y-1 p-4">
+        <a href="#summary" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Summary</a>
+        <a href="#courses" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Courses</a>
+        <a href="#education" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Education</a>
+        <a href="#skills" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Skills</a>
+        <a href="#experience" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Experience</a>
+        <a href="#projects" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Projects</a>
+        <a href="#achievements" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Achievements</a>
+        <a href="#contributions" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Contribs</a>
+        <a href="#downloads" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Downloads</a>
+        <a href="#contact" class="block text-base hover:text-indigo-500 dark:hover:text-indigo-400">Contact</a>
+      </nav>
+    </div>
+  
+    <main class="mt-6 md:mt-12 lg:mt-16 space-y-16 px-4 sm:px-6 lg:px-0 max-w-4xl mx-auto">
+  
+      <!-- Summary -->
+      <section id="summary" class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Summary</h2>
+        <ul class="list-disc list-inside space-y-1 text-sm sm:text-base">
+          <li>Innovative software developer skilled in HTML, JavaScript, PHP, DBMS, and Python.</li>
+          <li>Passionate about creating intuitive user experiences through UI/UX design.</li>
+          <li>Dedicated to continuous learning and tackling new challenges in technology.</li>
+          <li>Committed to developing impactful, innovative web applications and websites.</li>
+        </ul>
+      </section>
+  
+      <!-- Courses -->
+      <section id="courses" class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Courses &amp; Certifications</h2>
+        <ul class="list-disc list-inside space-y-1 text-sm sm:text-base">
+          <li>Coursera – Duke University – Programming Fundamentals (29 Sep 2020, 18h, 1C)</li>
+          <li>Coursera – Google – Build Wireframes & Low-Fidelity Prototypes (01 Mar 2022, 22h, 1C)</li>
+          <li>Coursera – Google – Conduct UX Research & Test Early Concepts (18 Mar 2022, 24h, 1C)</li>
+          <li>Coursera – Google – Crash Course on Python (08 Oct 2020, 28h, 1C)</li>
+          <li>Coursera – Google – Create High-Fidelity Designs & Prototypes in Figma (21 Mar 2022, 39h, 2C)</li>
+          <li>Coursera – Google – Design a UX for Social Good & Prepare for Jobs (24 Mar 2022, 55h, 3C)</li>
+          <li>Coursera – Google – Foundations of UX Design (27 Feb 2022, 18h, 1C)</li>
+          <li>Coursera – Google – Google UX Design Professional Certificate (24 Mar 2022, 216h, 12C + 7 Capstones)</li>
+          <li>Coursera – Google – Responsive Web Design in Adobe XD (23 Mar 2022, 42h, 2C)</li>
+          <li>Coursera – Google – Start the UX Design Process (01 Mar 2022, 33h, 2C)</li>
+          <li>Coursera – IBM – Cybersecurity Compliance Framework & System Administration (12 Oct 2020, 16h, 1C)</li>
+          <li>Coursera – Johns Hopkins University – R Programming (07 Dec 2021, 57h, 3C)</li>
+          <li>Coursera – HKUST – Front-End UI Frameworks & Tools (Bootstrap 4) (28 Feb 2022, 31h, 2C)</li>
+          <li>Coursera – The Linux Foundation – Linux for Developers (29 Sep 2020, 19h, 1C)</li>
+          <li>Web Development Training – Certificate of Completion</li>
+        </ul>
+      </section>
+
+    <!-- Education -->
+    <section id="education" class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Education</h2>
+      <div class="space-y-4 text-sm sm:text-base">
+        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow">
+          <h3 class="font-medium">B.E. Computer Science (Mobile Computing)</h3>
+          <p>Undergraduate, Chandigarh University</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow">
+          <h3 class="font-medium">High School</h3>
+          <p>D.A.V. Senior Public School, Surajpur</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/php" alt="PHP" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">PHP</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">JavaScript</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/python" alt="Python" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">Python</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/html5" alt="HTML5" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">HTML5</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/wordpress" alt="WordPress" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">WordPress</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/react" alt="React" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">React</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/nextdotjs" alt="Next.js" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">Next.js</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/nuxtdotjs" alt="Nuxt.js" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">Nuxt.js</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/mysql" alt="MySQL" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">MySQL</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/mongodb" alt="MongoDB" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">MongoDB</span>
+        </div>
+        <div class="flex flex-col items-center space-y-1 p-3 sm:p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+          <img src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap" class="w-10 h-10 sm:w-12 sm:h-12 filter grayscale hover:filter-none transition"/>
+          <span class="text-xs sm:text-sm font-medium">Bootstrap</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Experience</h2>
+      <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow text-sm sm:text-base">
+        <h3 class="font-medium text-base sm:text-lg">Software Developer, rtCamp</h3>
+        <time class="block text-gray-500 dark:text-gray-400 mb-2">Jul 2023 – Aug 2024</time>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Created migration scripts and GA4/Looker Studio reports for Cox Automotive.</li>
+          <li>Improved plugins for Cox and internal sites to enhance user experience.</li>
+          <li>Led the development of the Trust.txt Plugin v1.3 to increase digital transparency.</li>
+          <li>Coordinated with different teams to deliver high-quality WordPress solutions.</li>
+          <li>Completed thorough training in WordPress and Google Analytics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Projects</h2>
+      <div class="space-y-4 text-sm sm:text-base">
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition">
+          <h3 class="font-medium text-base sm:text-lg">Movie Library (WP Plugin & Theme)</h3>
+          <p>Built with WP API, Hooks, and custom functions for a full movie library experience.</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition">
+          <h3 class="font-medium text-base sm:text-lg">F-Moji | Team Leader</h3>
+          <p>Photo→emoji engine using PHP, JS, DBMS, Python, and Ajax for seamless UX.</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition">
+          <h3 class="font-medium text-base sm:text-lg">PHP Face Recognition Library</h3>
+          <p>Lightweight PHP core + JS frontend for quick face recognition demos.</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition">
+          <h3 class="font-medium text-base sm:text-lg">Headless PHP → Static Site</h3>
+          <p>WIP: PHP JSON backend + JS fetch to generate a fast static front end.</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition">
+          <h3 class="font-medium text-base sm:text-lg">WebAuthn Login Plugin (WP)</h3>
+          <p>Passwordless WP login via WebAuthn for top-tier security & speed.</p>
+        </div>
+        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transform transition">
+          <h3 class="font-medium text-base sm:text-lg">TicTacToe CLI Game</h3>
+          <p>C-based CLI vs. human or AI—good luck beating the bot!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Achievements</h2>
+      <ul class="list-disc list-inside text-sm sm:text-base">
+        <li>HackerRank (@shubhamkb): 2431 points in problem-solving, DSA, and multi-language challenges.</li>
+      </ul>
+    </section>
+
+    <!-- Contributions -->
+    <section id="contributions" class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Open Source &amp; GitHub</h2>
+      <ul class="list-disc list-inside text-sm sm:text-base">
+        <li>WordPress Core contributor: <a href="https://profiles.wordpress.org/shub07/" target="_blank" class="text-indigo-600 dark:text-indigo-400 hover:underline">shub07@WP.org</a></li>
+      </ul>
+    </section>
+
+    <!-- Downloads -->
+    <section id="downloads" class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Downloads</h2>
+      
+      <!-- Resume Download -->
+      <div class="mb-6">
+        <h3 class="font-medium text-lg mb-2">Resume</h3>
+        <a href="Shubham-Kumar-Bansal-Resume.pdf" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700 rounded-md transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Download Resume
+        </a>
+      </div>
+      
+      <!-- Certificates -->
+      <div>
+        <h3 class="font-medium text-lg mb-2">Certificates</h3>
+        <div class="space-y-2">
+          <a href="Certificates/Coursera-Duke University-Programmung Fundamentals-29sep2020-18h-1c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Duke University - Programming Fundamentals
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Build Wireframes and Low-Fidelity Prototypes-01mar2022-22h-1c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Build Wireframes and Low-Fidelity Prototypes
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Conduct UX Research and Test Early Concepts-18mar2022-24h-1c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Conduct UX Research and Test Early Concepts
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Crash Course on Python-08oct2020-28h-1c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Crash Course on Python
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Create High-Fidelity Designs and Prototypes in Figma-21mar2022-39h-2c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Create High-Fidelity Designs and Prototypes in Figma
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Design a User Experience for Social Good _ Prepare for Jobs-24mar2022-55h-3c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Design a User Experience for Social Good & Prepare for Jobs
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Foundations of User Experience (UX) Design-27feb2022-18h-1c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Foundations of User Experience (UX) Design
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Google UX Design Professional Certificate-24mar2022-216h-12aco7c-14tc.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Google UX Design Professional Certificate
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Responsive Web Design in Adobe XD-23mar2022-42h-2c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Responsive Web Design in Adobe XD
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Google-Start the UX Design Process Empathize, Define, and Ideate-01mar2022-33h-2c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Google - Start the UX Design Process: Empathize, Define, and Ideate
+            </span>
+          </a>
+          <a href="Certificates/Coursera-IBM-Cybersecurity Compliance Framework _ System Administration-12oct2020-16h-1c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              IBM - Cybersecurity Compliance Framework & System Administration
+            </span>
+          </a>
+          <a href="Certificates/Coursera-Johns Hopkins University-R Programming-07dec2021-57h-3c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Johns Hopkins University - R Programming
+            </span>
+          </a>
+          <a href="Certificates/Coursera-The Hong Kong University of Science and Technology-Front-End Web UI Frameworks and Tools Bootstrap 4-28feb2022-31h-2c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              HKUST - Front-End Web UI Frameworks and Tools Bootstrap 4
+            </span>
+          </a>
+          <a href="Certificates/Coursera-The Linux Foundation-Linux for Developers-29sep2020-19h-1c.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              The Linux Foundation - Linux for Developers
+            </span>
+          </a>
+          <a href="Certificates/Web Development Training - Certificate of Completion.pdf" class="block bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 p-3 rounded-md transition-colors">
+            <span class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Web Development Training - Certificate of Completion
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="space-y-2 text-center text-sm sm:text-base">
+      <h2 class="text-xl sm:text-2xl font-semibold border-b-4 border-indigo-500 inline-block">Contact</h2>
+      <p>Email: <a href="mailto:kumarbansal.shubham07@gmail.com" class="text-indigo-600 dark:text-indigo-400 hover:underline">kumarbansal.shubham07@gmail.com</a></p>
+      <p>Phone: <a href="tel:+916230025447" class="text-indigo-600 dark:text-indigo-400 hover:underline">+91 62300 25447</a></p>
+      <p>GitHub: <a href="https://github.com/shubkb07" target="_blank" class="text-indigo-600 dark:text-indigo-400 hover:underline">github.com/shubkb07</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/shubhamkumarbansal/" target="_blank" class="text-indigo-600 dark:text-indigo-400 hover:underline">linkedin.com/in/shubhamkumarbansal</a></p>
+    </section>
+
+  </main>
+
+  <footer class="py-6 text-center text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+    &copy; 2025 Shubham Kumar Bansal. All rights reserved.
+  </footer>
+
+  <!-- Inline JS -->
+  <script>  
+    // Mobile nav toggle  
+    document.getElementById('nav-toggle').addEventListener('click', () => {  
+      document.getElementById('mobile-nav').classList.toggle('hidden');  
+    });  
+    // Dark mode toggle & persistence  
+    const darkBtn = document.getElementById('dark-toggle');  
+    darkBtn.addEventListener('click', () => {  
+      document.documentElement.classList.toggle('dark');  
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';  
+    });  
+    if (  
+      localStorage.theme === 'dark' ||  
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)  
+    ) {  
+      document.documentElement.classList.add('dark');  
+    }  
+  </script>
+
+</body>
+</html>
